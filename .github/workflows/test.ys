@@ -1,0 +1,12 @@
+--- !yamlscript/v0
+
+# Load mapping of all GitHub workflow data:
+gh =: slurp('.github/github.json').json/load()
+
+say: "Hello $(ENV.USER)!"
+say: "Workflow file: '$(gh.workflow)'"
+
+shell::
+  make test
+
+shell:: docker run hello-world

@@ -1,0 +1,7 @@
+on: push
+jobs:
+  workflow:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: yaml/yamlscript-workflow-action@main
+#     with: {ys-file: .github/workflows/other-name.ys}
